@@ -12,20 +12,20 @@ To ensure exact consistency and comparability, all three implementations:
 ## Strategy Specifications
 
 ### Mathematical Model
-* **EMA Formula**: For a price series $x$, the Exponential Moving Average is calculated recursively:
-  $$\text{EMA}_0 = x_0$$
-  $$\text{EMA}_t = x_t \cdot \alpha + \text{EMA}_{t-1} \cdot (1 - \alpha)$$
-  where the smoothing factor is $\alpha = \frac{2}{\text{period} + 1}$.
+* **EMA Formula**: For a price series `x`, the Exponential Moving Average is calculated recursively:
+  * `EMA_0 = x_0`
+  * `EMA_t = (x_t * alpha) + (EMA_{t-1} * (1 - alpha))`
+  * where the smoothing factor is `alpha = 2 / (period + 1)`
 * **Fast EMA**: 12-period EMA of the Close price.
 * **Slow EMA**: 26-period EMA of the Close price.
-* **MACD Line**: $\text{MACD}_t = \text{Fast EMA}_t - \text{Slow EMA}_t$.
+* **MACD Line**: `MACD_t = Fast EMA_t - Slow EMA_t`
 * **Signal Line**: 9-period EMA of the MACD Line.
 
 ### Entry/Exit Logic (Long-Only)
 * **Go Long (Buy)**: When the MACD line crosses **above** the Signal line on a completed bar:
-  $$\text{MACD}_{t} > \text{Signal}_{t} \quad \text{and} \quad \text{MACD}_{t-1} \le \text{Signal}_{t-1}$$
+  * `MACD_t > Signal_t` AND `MACD_{t-1} <= Signal_{t-1}`
 * **Exit Position (Go Flat)**: When the MACD line crosses **below** the Signal line on a completed bar:
-  $$\text{MACD}_{t} < \text{Signal}_{t} \quad \text{and} \quad \text{MACD}_{t-1} \ge \text{Signal}_{t-1}$$
+  * `MACD_t < Signal_t` AND `MACD_{t-1} >= Signal_{t-1}`
 
 ---
 
