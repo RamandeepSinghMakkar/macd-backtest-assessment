@@ -1,0 +1,39 @@
+========================================
+        VECTORBT BACKTEST RESULTS       
+========================================
+Total Return:      11.0284%
+Sharpe Ratio:      2.1845
+Max Drawdown:      -3.0456%
+Number of Trades:  236
+========================================
+
+Vectorbt Full Portfolio Stats:
+Start                         2025-01-01 05:00:00+00:00
+End                           2025-12-31 23:00:00+00:00
+Period                                257 days 07:00:00
+Start Value                                     10000.0
+End Value                                  11102.835674
+Total Return [%]                              11.028357
+Benchmark Return [%]                          13.500173
+Max Gross Exposure [%]                            100.0
+Total Fees Paid                                     0.0
+Max Drawdown [%]                                3.04562
+Max Drawdown Duration                  74 days 18:00:00
+Total Trades                                        236
+Total Closed Trades                                 235
+Total Open Trades                                     1
+Open Trade PnL                                -1.305594
+Win Rate [%]                                  34.042553
+Best Trade [%]                                 2.696275
+Worst Trade [%]                               -0.700297
+Avg Winning Trade [%]                          0.476166
+Avg Losing Trade [%]                          -0.179125
+Avg Winning Trade Duration              0 days 22:27:00
+Avg Losing Trade Duration     0 days 07:37:38.823529411
+Profit Factor                                  1.375925
+Expectancy                                     4.535095
+Sharpe Ratio                                   2.184543
+Calmar Ratio                                   5.253063
+Omega Ratio                                    1.112888
+Sortino Ratio                                  3.424021
+dtype: object
